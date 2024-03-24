@@ -1,1 +1,1 @@
-# js-chat-api
+# js-chat-apiThis API is used in the Js Chat system, a Telegram-like application developed with Node.js, React, React native, Socket.io and Redis. The application allows user registration, contact storage and message exchange between users.
