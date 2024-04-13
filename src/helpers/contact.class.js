@@ -2,7 +2,26 @@ const findIndex = require('../utils/findIndex')
 
 class Contact
 {
-    contact = []
+    contact = [
+        {
+            id: 1,
+            avatar: 'https://img.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg',
+            name: 'Jordan Wilian',
+            phone: '(11) 1 1111-1111'
+          },
+          {
+            id: 2,
+            avatar: 'https://img.freepik.com/free-photo/handsome-young-man-with-new-stylish-haircut_176420-19636.jpg',
+            name: 'Carlos Oliveira',
+            phone: '(22) 2 2222-2222'
+          },
+          {
+            id: 3,
+            avatar: 'https://parrotprint.com/media/wordpress/7630543941b44634748ddea65e5a417c.jpg',
+            name: 'Ana Beatriz',
+            phone: '(33) 3 3333-3333'
+          },
+    ]
 
     getContacts()
     {
@@ -51,8 +70,6 @@ class Contact
        this.contact[index] = {...contact}
        return this.contact[index]
     }
-
-    
 
 }
 
