@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 app.use(express.json())
 
+
+//REFATORAR AQUI COM NODE CONFIG E .ENV
+
 const cors = require('cors')
 const corsOption = {
     origin: ['http://localhost:3000'],
@@ -13,7 +16,6 @@ app.use(cors(corsOption));
 
 const contactRouter = require('./routes/contact.routes')
 app.use(contactRouter)
-
 
 const PORT = 3001
 

@@ -3,7 +3,7 @@ const findIndex = require('../utils/findIndex')
 class Contact
 {
     contact = [
-        {
+        /*{
             id: 1,
             avatar: 'https://img.freepik.com/fotos-gratis/retrato-de-homem-branco-isolado_53876-40306.jpg',
             name: 'Jordan Wilian',
@@ -20,7 +20,7 @@ class Contact
             avatar: 'https://parrotprint.com/media/wordpress/7630543941b44634748ddea65e5a417c.jpg',
             name: 'Ana Beatriz',
             phone: '(33) 3 3333-3333'
-          },
+          },*/
     ]
 
     getContacts()
