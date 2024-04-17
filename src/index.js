@@ -1,7 +1,16 @@
 const express = require('express')
+const { verifyImagePath } = require('./helpers/renameFile')
+
 const app = express()
 app.use(express.json())
 
+const path = require('path');
+
+// Substitua 'nomeDoDiretorio' pelo nome real do seu diretório onde o Multer salva as imagens
+const dirImagens = path.join(__dirname, 'imagens');
+
+// Servindo os arquivos estáticos
+app.use('/imagens', express.static(dirImagens));
 
 //REFATORAR AQUI COM NODE CONFIG E .ENV
 
@@ -13,6 +22,8 @@ const corsOption = {
 }
 
 app.use(cors(corsOption));
+
+verifyImagePath()
 
 const contactRouter = require('./routes/contact.routes')
 app.use(contactRouter)
