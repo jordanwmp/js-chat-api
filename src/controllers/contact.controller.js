@@ -23,18 +23,19 @@ const find = ((req, res) => {
 })
 
 const create = ((req, res) => {
-    console.log('file name? ', req.file.filename)
-    const _contact = { ...req.body}
+    //console.log('file name? ', req.file.filename)
+    const _contact = { ...req.body }
 
-    if(req.file.filename)
-    {
-        const name = generateFileName(req.file.filename);
-        _contact['avatar'] = name;
-        renameFile(req.file.filename, name);
-    }else{
-        _contact['avatar'] = ''
+    if (req.file) {
+        if (req.file.filename) {
+            const name = generateFileName(req.file.filename);
+            _contact['avatar'] = name;
+            renameFile(req.file.filename, name);
+        } else {
+            _contact['avatar'] = ''
+        }
     }
-    
+
     contact.addContact(_contact)
     res.status(200).json({
         status: 200,
